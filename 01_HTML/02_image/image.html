@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image</title>
+  </head>
+  <body>
+    <h1>Image</h1>
+    <!-- 이미지 태그 
+  src속성 : 이미지의 경로
+  alt속성 : 이미지를 설명하는 대체텍스트트 
+  -->
+
+    <!-- 00_route
+   sub
+    subRoute.html
+    route.html
+  01_text
+  list.html
+  text.html
+  02_image
+  image.html
+  home.html -->
+    <img src="../../asset/img/aaa.jpg" alt="다람쥐" />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Jordan_by_Lipofsky_16577.jpg/250px-Jordan_by_Lipofsky_16577.jpg"
+      alt=""
+    />
+    <!-- 
+  *figure
+  설명글이 필요한 대상과 설명글을 한 단위로 묶어준다
+  *figcapation:
+  설명글을 삽입하는 태그
+  설명글과 설명하는 대상이 figure태그로 감싸져야 한다 -->
+    figure>img+figcatpion
+    <figure>
+      <img src="../../asset/img/bbb.jpg" alt="강아지" />
+      <figcaption>강아지</figcaption>
+    </figure>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/J8E1KvSxsXc?si=NXKTEU39jq_a4tPj"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <!-- ifrmae : 외부의 HTML문서 및 컨텐츠를 가져 올 때때-->
+    <iframe
+      id="anchor"
+      width="560"
+      height="315"
+      src="../home.html"
+      frameborder="0"
+    ></iframe>
+    <iframe src="" frameborder="0"></iframe>
+  </body>
+</html>

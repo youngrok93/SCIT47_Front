@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form태그</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <!-- 입력을 받는 요소는 무조건 다 form태그 안에 들어있어야 한다.
+ <form action="어디다보낼건지(경로)"method="get|post">
+  input : 사용자 입력을 위한 태그
+   -텍스트 타입
+   -날짜 시간 타입
+   -선택타입
+   -특수타입
+   fieldset,legend 태그-나눠놓고 싶을때
+   폼 요소를 그룹화 하고 그룹의 제목을 지정
+  -->
+
+        <legend>분류1: 텍스트 타입</legend>
+        <label for="text">입력란</label>
+        <input type="text" name="" id="text" /> <br />
+        <label for="pw">비밀번호 입력란</label>
+        <input type="password" name="" id="pw" /><br />
+        <label for="email">이메일 입력란</label>
+        <input type="email" name="" id="email" /><br />
+        <label for="number">숫자 입력란</label>
+        <input type="number" name="" id="number" /><br />
+
+        <label for="search">검색</label
+        ><input
+          type="search"
+          name=""
+          id="search"
+          placeholder="검색어를 입력하세요"
+        /><br />
+
+        <label for="url">url</label
+        ><input
+          type="url"
+          name=""
+          id="url"
+          placeholder="url를 입력하세요"
+        /><br />
+        <label for="tel">전화번호 입력란</label
+        ><input type="tel" name="" id="tel" /><br />
+        여러 줄 입력란<br />
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>분류2:날짜/시간 타입</legend>
+        <label for="date">날짜짜</label>
+        <input type="date" name="" id="date" /><br />
+        <label for="dateTime">날짜 시간간</label>
+        <input type="datetime-local" name="" id="dateTime" /><br />
+        <label for="month">월</label>
+        <input type="month" name="" id="month" /><br />
+        <label for="week">주</label>
+        <input type="week" name="" id="week" /><br />
+        <label for="time">시간</label>
+        <input type="time" name="" id="time" /><br />
+      </fieldset>
+      <fieldset>
+      <legend>분류3: 선택타입</legend>
+      체크박스<br>
+      <input type="checkbox" name="question" id="Q1" value="111"><Label for="Q1">질문1</Label>
+      <input type="checkbox" name="question" id="Q2" value="222"checked><Label for="Q2">질문2</Label>
+      <input type="checkbox" name="question" id="Q3" value="333"><Label for="Q3">질문3</Label>
+      <hr>  
+      라디오<br>
+      <!-- checked :새로고침을 해도 그대로 유지 -->
+       <!-- 이름을 바꾸어 같은 그룹이 아니게 만들 수도 있다. (그룹내 1개만 선택 가능) -->
+        <input type="radio" name="choice" id="C1"> <label for="C1">선택1</label>
+        <input type="radio" name="choice" id="C2"> <label for="C2">선택2</label>
+        <input type="radio" name="choice" id="C3"checked> <label for="C3">선택3</label>
+      <hr>
+        <label for="file">파일</label><input type="file" name="" id="file">
+      <hr>
+      <label for="select">셀렉트</label>
+      <!-- selected : 고정이 됨 -->
+      <select name="select" id="select">
+        <option value="1">선택1</option>
+        <option value="2"selected>선택2</option>
+        <option value="3">선택3</option>
+
+      </select>
+      
+      </fieldset>
+<fieldset>
+<legend>분류4: 특수타입</legend>
+  범위<input type="range" value="0" max="10" name="range"><br>
+  색상<input type="color" name="" id=""><br>
+  히든<input type="hidden" name="hidden" value="화면에 안보이지만 전달하고 싶은 값"><br>
+
+
+</fieldset>
+<input type="submit" value="제출">
+<input type="reset" value="재입력">
+      <!--똑같이 작동함  -->
+<button type="submit">제출</button>
+<button type="reset">재입력</button>
+
+<input type="image" src="../../asset/img/send.png" 
+alt="submit기능이 들어있는 img">
+    </form>
+  </body>
+</html>

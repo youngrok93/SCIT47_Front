@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자 기본</title>
+  <style>
+    /* 전체 선택자 : 페이지에 있는 모든 요소에 스타일 적용 */
+    *{
+      font-family: sans-serif;
+    }
+
+    /* 태그 선택자 (tag) */
+h1{
+  color:aqua;
+}
+
+/* 클래스 선택자 (dot) */
+.highlight{
+background-color: yellow;
+
+}
+/* 아이디 선택자(hash#) */
+  #mainTitle{
+    text-decoration: underline;
+  }
+
+  /* 421p */
+  /* 자손 선택자(A공백B)
+    A의 모든 하위 B를 선택 */
+    div p{
+      color:green;
+    }
+
+    .parent .child{
+      text-decoration: line-through;
+    }
+  /* 자식 선택자 (A > B)
+    A의 자식인 B만 선택
+  */
+  div>p {
+    text-decoration: underline;
+  }
+  /* 인접 형제 선택자(A+B) 
+    A 바로 뒤에 나오는 B
+  */
+h2+p{
+  color:red;
+}
+  /* 일반 형제 선택자 (A ~ B)
+  A 이후에 나오는 모든 B
+  */
+  h2~p{
+    font-style: italic;
+  }
+  /* 그룹 선택자 */
+  h1,h2{
+    background-color: aliceblue;
+  }
+  
+  /* name선택자?? */
+  [name="text"]{
+    border: 2px solid blue;
+  }
+  [required]{
+    background-color: powderblue;
+
+  }
+  </style>
+
+</head>
+<body>
+  <h1 id="mainTitle">CSS 선택자 연습</h1>
+  <p>
+    <span class="highlight">이 문자열은 강조되었습니다.</span>
+    이 문자열은 강조되지 않았습니다.
+    <!-- span은 의미를 갖지 않는다. -->
+  </p>
+
+  <div class="parent">
+    <p>div의 자식 p요소</p>
+    <section class="child">
+      div의 자식 section요소 (이 요소는 .parent .child 선택지에 의해 취소선이 그어집니다.)
+    <p>div의 자손 p요소</p>
+  </section>
+  </div>
+<h2>제목2</h2>
+<p>이 문장은 h2의 바로 뒤에 나오는 인접 형제 단락입니다.</p>
+<p>이 문장은 h2이후에 나오는 일반 형제 단락 입니다.</p>
+
+<form action="">
+  <label for="text">텍스트 입력란</label>
+  <input type="text" name="" id=""><br>
+  <label for="password">패스워드 입력란</label>
+  <input type="password" name="password" id="password" required><br>
+<!-- 속성이름만 적어도 적용이 된다. -->
+</form>
+<!-- .parent>.child -->
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.prettier": "always"
+  },
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.syntaxProfiles": {
+    "html": {
+      "tag_case": "lower",
+      "profile": "html5"
+    }
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "path-autocomplete.enableFolderTrailingSlash": false,
+  "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+  "html.format.indentInnerHtml": true
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- ctrl+/ -->
+<!-- ctrl 주석 -->
+<!-- HTML 문서의 버전 정보를 알리는 표시  -->
+<html lang="ko">
+  <!-- HTML의 문서의 시작을 알리는 부분분 -->
+  <head>
+    <!-- HTML 문서의 메타데이터를 정의 - 다른 부분을 정의하는 데이터다?-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home</title>
+    <!-- <link>,<script>,<style>...
+    외부파일<javascript, css등)을 불러옴 -->
+  </head>
+
+  <!-- 실제 브라우저에서 데이터를 출력하는 부분분 -->
+   <body>
+    <h1>포트폴리오 제목</h1>
+
+    <h2>이름: 김영록</h2>
+    <p>소개글: 요로시쿠 오네가이시마스 </p>
+    <p>SNS: 없음</p>
+    <p>이메일:simsim152@gmail.com</p>
+
+   
+
+    <ul>
+      <li>00_route</li>
+      <ul>
+        <li>sub</li>
+        <ul>
+          <li>
+            <a href="/01_HTML/00_route/sub/subRoute.html">subRoute.html</a>
+          </li>
+        </ul>
+        <li><a href="/01_HTML/00_route/route.html">route.html</a></li>
+        <li><a href="/01_HTML/00_route/sameRoute.html">sameRoute.html</a></li>
+      </ul>
+
+      <li>01_text</li>
+      <ul>
+        <li><a href="/01_HTML/01_text/list.html">list.html</a></li>
+        <li><a href="/01_HTML/01_text/text.html">text.html</a></li>
+      </ul>
+
+      <li>02_image</li>
+      <ul>
+        <li><a href="/01_HTML/02_image/image.html">image.html</a></li>
+      </ul>
+      <li><a href="/01_HTML/home.html">home.html</a></li>
+    </ul>
+
+
+
+    <!-- 
+    *web 경로
+    protocol host           port    path  query string
+    https:// www.domain.com :8888 / login ?query=name
+    -url
+    origin:protocol +host +port
+    protocol : http, https
+    host : 사이트 도메인 (IP주소를 보기쉽게 문자열로 변경)
+    port : 포트 번호
+    path : 서버측의 사이트 내부 경로
+    query string: 요청의 key와 value값 
+
+    *Directory 경로 
+    HTML 파일에서 경로는 파일 시스템 내의 위치를 지정한다.
+    웹 페이지에서 다른 파일이나 리소스를 참조하는데 사용.
+
+    경로 구분
+     *상대경로(Relative path)
+     *절대경로(Absolute path)
+     / 절대경로
+     ./ 현재경로
+    ../ 상위 경로
+    -->
+
+    <a href="/01_HTML/01_text/text.html">라이브 서버 기준 절대 경로</a>
+    <a href="C:/html-css-js-lecture-47/01_HTML/01_text/text.html"></a>
+
+    <br />
+    <iframe width="560" height="315" src="./00_route/route.html"></iframe>
+  
+   <hr />
+   <a href="https://images.app.goo.gl/tjDiZjjGAwjymcmS6"><img src="https://i.namu.wiki/i/bw_dRUqeX-lNg8eXXA3EWGuYn9U7kETaBMvsnaNaJjAyxjdHfkxnyy9CXf7Fs28QU2eCDPajVLcc1mh4-ox3Lg.webp" alt="취미"></a>
+  <!-- 취미 구역 -->
+  <div class="section">
+    <div class="section-title">취미</div>
+    <ul>
+      <li>농구</li>
+      <li>피아노 치기</li>
+      <li>문화생활</li>
+    </ul>
+    
+  </div>
+
+  <!-- 특기 구역 -->
+  <div class="section">
+    <div class="section-title">특기</div>
+    <ul>
+      <li>일본어</li>
+      <li>영어</li>
+      <li>한국어</li>
+  </body>
+</html>

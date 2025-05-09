@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "oderwat.indent-rainbow",
+    "ms-ceintl.vscode-language-pack-ko",
+    "ritwickdey.liveserver",
+    "pkief.material-icon-theme",
+    "ionutvmi.path-autocomplete",
+    "shardulm94.trailing-spaces",
+    "xabikos.javascriptsnippets",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

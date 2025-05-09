@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS적용 우선순위</title>
+    <style>
+      /* 
+*CSS 적용 우선순위 (204p)(중요도,명시도-적용범위, 소스순서)
+
+[중요도]
+1.사용자 스타일 시트
+    (e.g 확장을 통한 다크모드,광고영역 가리기, 개발자도구를 통한 임시수정 )
+2. !important
+    우선순위를 무시하고 해당 스타일을 강제 적용
+    왠만하면 쓰지말기
+3. 웹페이지에서 제공자가 만든 스타일 시트
+4. 브라우저가 제공하는 기본 스타일 (default값)
+
+
+[명시도] (범위가 좁을수록 순위가 높다)
+1.인라인 스타일
+2.ID에 적용하는 스타일
+3.클래스에 적용하는 스타일
+4.태그에 적용하는 스타일
+
+[통합]
+1.!important
+2.인라인-1000pt
+3.ID 선택자 (#)-100pt
+4.클래스 선택자 (.)또는 가상클래스 선택자-10pt
+5.태그-1pt
+
+
+
+*/
+    </style>
+  </head>
+  <body></body>
+</html>

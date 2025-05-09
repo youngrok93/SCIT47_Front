@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+   <table> : 표 전체를 감싸는 요소
+    <caption> :표의 제목 또는 설명
+    <thead> : 표의 헤더 영역 (열제목들을 그룹화)
+    <tbody> : 표의 본문 영역 (실제 데이터 행들)
+    <tfoot> : 표의 바닥 영역 (한계나 요약 등)
+    <tr> : 표의 한 행을 정의 table row
+    <th> : 열 제목 셀 table header cell
+    <td> : 일반 데이터 셀 table data cell
+      
+      중첩구조와 들여쓰기에 주의하자 
+      -->
+
+    <!-- colspan :가로 병합합 -->
+    <!-- table>tr>th*3^(tr>td*3)*2-->
+    <!-- 셀 (th, td )에 사용하는 속성(기본값 1)
+      colspan : 셀에 가로 방향으로 몇 개의 열을 차지할지 지정
+      rowspan : 셀에 세로 방향으로 몇 개의 행을 차지할지 지정정 -->
+    <table>
+      <caption>
+        전화번호부
+      </caption>
+      <tr>
+        <th>No.</th>
+        <th colspan="2">이름</th>
+        <th>전화번호</th>
+      </tr>
+      <tr>
+        <td>01</td>
+        <td>이</td>
+        <td>순신</td>
+        <td>010-1234-4567</td>
+      </tr>
+      <tr>
+        <td rowspan="2">02</td>
+        <td rowspan="2">홍</td>
+        <td rowspan="2">길동</td>
+        <td>010-2345-7897</td>
+      </tr>
+      <tr>
+        <td>010-7777-7777</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td colspan="4">1</td>
+      </tr>
+      <tr>
+        <td rowspan="2" colspan="2">5</td>
+
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td colspan="2">13</td>
+
+        <td colspan="2">15</td>
+      </tr>
+    </table>
+
+    <hr />
+    <table>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+      </tr>
+    </table>
+
+    <table>
+      <caption>
+        2025년 1분기 매출
+      </caption>
+      <thead>
+        <tr>
+          <th>월</th>
+          <th>매출</th>
+          <th>상태</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1월</td>
+          <td>10,000,000</td>
+          <td>정상</td>
+        </tr>
+        <tr>
+          <td>2월</td>
+          <td>12,000,000</td>
+          <td>정상</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>합계</td>
+          <td>22,000,000</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
