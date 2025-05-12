@@ -33,18 +33,44 @@
     선택자 {
       스타일 속성 : 속성 값;
     }
+      h1,h2 등 각 태그별로 가지고 있는 default 값이 있음.
+      예를들면 h1은 font-size 2em;
+      30px로 설정해두어도 적용되지 않음
+      스타일을 상속해도 적용되지 않는다면 default 값이 있는지 확인
   */
+
+
 
   body{
 background-color: beige;
-    
+    font-size: 30px;
   }
 
 
   h1{
     color:pink;
-
+font-size: inherit;
+  /* inherit 속성 : default 값이 아닌 부모로부터 상속받은 값으로 설정 */
   }
+
+  /* 
+  브라우저에서 직접 명시한 기본 스타일
+  명시된 것은 아니지만 기본으로 나타나는 스타일
+  
+  보통은 상속값이 우선적용 되는것이 맞음. 
+  그러나 직접 명시된 브라우저의 기본 스타일은 상속이 덮지 못한다.
+  강제로 덮도록 하는 경우 속성값에 inherit속성을 부여.
+  1) em : 현재 요소의 font-size를 기준으로 한 배수 단위. 
+  -body의 font-size 의 default 값은 16px이다. 
+  1em = 현재 글꼴 크기
+  -rem : 루트 요소의 font- size. 전역적으로 일관된 크기 설정이 가능함. 
+    루트 요소의 글꼴?
+    -html 요소에 적용된 font 
+    -100%로 적용하는 경우는 1rem = 16px
+    -디자인 시스템에서 계산 편의성을 고려하는 경우는 62.25%로 설정 1.6rem =16px
+    
+  */
+  
   </style>
 
 </head>

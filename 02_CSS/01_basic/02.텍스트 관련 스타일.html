@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트 관련 스타일</title>
+    <!-- 웹 폰트 참조하기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech&display=swap" rel="stylesheet">
+    <style>
+      .font-style {
+
+        font-style: italic;
+        font-variant: small-caps;
+        font-weight: 900;
+        font-size: 30px;
+        font-family: cursive;
+
+        font: italic small-caps 900 30px cursive;
+        font: 30px/4 "Share Tech";
+      }
+      /* 
+-글자 색 지정
+color
+-텍스트의 줄 표시 / 제거 
+text decoration : none | underline |overlive| line-through
+-대소문자 변환
+text-transform: none | capitalize | uppercase | lowercase |...
+-텍스트 그림자 효과
+text-shadow :none | <가로거리><세로거리><번짐정도><색상>
+
+*/
+/* 웹 화면에서 F12 눌러서 변경 가능 */
+.blue-shadow-text{
+  color: darkblue;
+  text-decoration: line-through;
+  text-transform: capitalize;
+  text-shadow: 5px 5px 5px blue;
+}
+
+/* 
+공백 및 자간 및 줄바꿈
+white-space:
+normal(공백1 개행무시 줄바꿈O)
+ nowrap (공백1 개행무시 줄바꿈X)
+ pre (공백유지 개행유지 줄바꿈)pre 태그
+ pre-line (공백1 개행유지 줄바꿈O)
+ pre-wrap(공백유지 개행 줄바꿈)
+
+
+
+
+letter-spacing: normal |<크기>
+word-spacing: normal |<크기>*/
+
+.white-space-test{
+white-space: pre; 
+letter-spacing: normal;
+word-spacing: normal;
+}
+
+/* 문단 관련 속성
+text-allgm : start |end|left |right|center|justify
+ 텍스트 또는 인라인 요소의 정렬 지정. 일부 블록요소에는 동작하지 않는다.
+
+text-justify->지원안함
+text-indent:<크기>|<백분율>
+ 단락(문단,p태그)의 첫 글자 앞의 들여쓰기를 조절
+백분율로 지정하는 경우 부모요소의 너비를 기준으로 한 상대값
+
+ line-height : normal | (숫자) | <크기>  | <백분율>
+ 숫자로 설정하는 경우 글자 크기의 n배로 계산
+
+
+*/
+/* test justify 같은건 호환이 안됨으로 호환되는지 확인 할 필요가 있음 */
+.paragraph-style{
+  text-align: justify;
+  /* test-justify:distribute; */
+  text-justify: distribute;
+}
+.share-tech-regular {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noto-sans-jp-uniquifier {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <!-- 
+   *텍스트 관련 스타일 종류 
+   font-style: 문자 스타일 (normal | italic | ...)
+   font-variant: 소문자를 작은 대문자로 표현하기 small- caps |normal
+   font-weight: 텍스트 두께 100~900, bold(700), normal(400),...
+   font-size:텍스트의 크기  (단위!) 
+   font-family: 글꼴 지정 cursive;
+   
+   font:30px/4 cursive
+
+  폰트 단축 속성: 순서와 필수항목에 주의. 각 항목은 공백으로 구분
+    백업폰트 지정시 콤마로 연결
+  font: <font-style><font-variant><font-weight><font-size>< font-family>;
+  1.필수항목: <font-size>/<line-height> <font-family>(빠지면 CSS가 무효처리됨!)
+  2.line-height는 /를 붙여야 적용됨
+  -->
+
+    <p class="font-style">ABCD abcd 텍스트 아무거나</p>
+    <p class="blue-shadow-text">BlueShadowText</p>
+    <p class="white-space-test">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam tempora laboriosam labore illum nulla, culpa soluta libero? Dolorem quidem, maxime quo porro eveniet voluptatibus dicta sapiente totam iste, quia velit.
+      </p>
+      
+      <p class="bebas-neue-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laborum cum iste. Maxime ullam amet odio. Tenetur non at iusto, explicabo fugiat perspiciatis facere voluptates facilis eveniet quae aspernatur vitae.</p>
+    <p class="noto-sans-jp-uniquifier">私は今勉強中です。</p>
+      <p style="font-family:Noto Sans JP">私は今勉強中です。</style>
+  </body>
+</html>

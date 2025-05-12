@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>목록 스타일 속성</title>
+<style>
+/* 목록 스타일 속성 
+  list-style-type: 목록 기호 (블릿, 번호 등)의 종류 설정
+  list-style-position:목록 기호의 위치 (inside | outside)
+  list-style-image:사용자 정의 이미지로 목록 기호 설정
+  list-style: <type | image> <position>
+    -타입과 이미지는 모두 기호를 지정하기 때문에 동시에 지정하지 않는다.
+    -각 속성값은 공백으로 구분한다.
+
+    fonts.google.com에서 아이콘을 찾아서 넣어보세요!
+     svg는 벡터 형식의 파일, 선명함, 코드로 편집이 가능
+     png 파일은 고정된 해상도와 크기 투명한 배경, 크기조정시 품질손상 가능성 있음.
+
+     아이콘 적용에 있어서 정렬을 조절해야 할 필요성이 있기 때문에 
+     list-style-image로 삽입하는 것은 추천하지 않는다.
+     따라서 가상요소에 이미지를 삽입하는 방식을 택한다. 
+  */
+   
+ol{
+  /* list-style-type:disc ; */
+  /* list-style-position: outside; */
+  /* list-style-image: url("../../asset/img/blank_heart.svg"); */
+  /* list-style-image: linear-gradient(to left bottom,red,blue); */
+  list-style: url ("../../asset/img/blank_heart.svg");
+
+}
+  
+  
+  
+  
+  
+</style>
+
+</head>
+<body>
+  
+</body>
+<h2>목록 스타일 예제</h2>
+<!-- ol>li{5번째 항목}*4 -->
+<ol>
+  <li>1번째 항목</li>
+  <li>2번째 항목</li>
+  <li>3번째 항목</li>
+  <li>4번째 항목</li>
+</ol>
+<ul>
+  <li>1번째 항목</li>
+  <li>2번째 항목</li>
+  <li>3번째 항목</li>
+  <li>4번째 항목</li>
+</ul>
+</html>
