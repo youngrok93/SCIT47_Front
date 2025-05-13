@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background</title>
+</head>
+<style>
+.example{
+  width:500px;
+  height: 300px;
+  margin: 10px;
+  border: 1px solid rgba(149, 0, 0, 0.414);
+  background-color: rgba(0, 0, 0, 0.27);
+}
+
+/* 배경색과 배경 이미지
+-background color
+색상(hex,rgb,rgba,키워드 등) 배경의 색상을 지정
+ -background-image :이미지 또는 그라디언트
+ url('경로')|none|linear-gradient()|radial-gradient()
+ 
+ -background-repeat:이미지 반복 방식
+ repeat | no-request |...
+ -background-position:이미지의 위치 지정
+ left|right|top|bottom|center|<수평 위치><수직 위치>
+ -background-size: 이미지 크기 조절
+ auto|contain|cover|<폭><높이>
+ scroll|fixed|...
+
+ -background (단축속성)
+ 위 속성들을 축약해 한 줄로 표현
+ 기본적으로 color 혹은 그를 대체하는 속성 하나만 있어도 적용된다. 
+ *주의 : <position>/<size> 는 슬래시로 구분해야 한다.
+  나머지 속성은 순서에 관계 없다. 
+ */
+
+ .url-img{
+  background-image: url(../../asset/img/numpad-hundred.png);
+ }
+ .repeat{
+  background-repeat: repeat;
+  
+ }
+ .no-repeat{
+  /* background-repeat: no-repeat; 
+  background-position: bottom right;
+  background-size: contain;*/
+  background:url('../../asset/img/numpad-hundred.png') 
+  bottom right/contain no-repeat;
+ }
+
+ body{
+  /* background-image: url("../../asset/img/image.png"); 
+  background-size: auto 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;*/
+
+  background: url("../../asset/img/image.png") bottom left/auto 50vh no-repeat fixed;
+  
+ }
+ /* 
+ 
+ -background-blend-mode : 이미지/색상 혼합 방식
+ 배경 레이어가 겹쳐 있을 때 혼합 방식을 설정
+ 배경 이미지를 수정하지 않고 다양한 비주얼 연출
+ 빠른 시각적 변화, 테마 전환시 유용
+ normal|multiply|overlay|darken|lighten|color-dodge|...*/
+
+ .multi-layer{
+  /* 배경 속성은 컴마를 이용해 레이어를 쌓을 수 있다. */
+  background:Linear-gradient(to bottom, rgba(0,0,0,0),red),url("../../asset/img/aaa.jpg")
+ no-repeat center/cover;
+ background-blend-mode: darken;
+ /* cover가 단축속성이므로 슬래쉬를 앞에 써야함 */
+</style>
+<body>
+  <div class="example url-img repeat"></div>
+  <div class="example url-img no-repeat"></div>
+  <div class="example multi-layer"></div>
+</body>
+</html>
+
+/* 파란색- 콘텐츠 영역(텍스트나 이미지가 표시되는 실제 내용 영역)
+   패딩- 콘텐츠와 테두리 사이의 여백(배경색 적용)
+   테두리-두께와 스타일 지정
+   마진(margin)-다른 요소와의 간격 조절 
+   */
+
+   /* display 속성 
+   블록-한 줄 전체를 차지
+   인라인- 내용만큼만 공간 차지(width, height 설정 불가)
+   인라인-블록: 인라인처럼 배치되지만 블록 속성(//가능) */

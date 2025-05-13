@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>목록 스타일 속성</title>
-<style>
-/* 목록 스타일 속성 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>목록 스타일 속성</title>
+    <style>
+      /* 목록 스타일 속성 
   list-style-type: 목록 기호 (블릿, 번호 등)의 종류 설정
   list-style-position:목록 기호의 위치 (inside | outside)
   list-style-image:사용자 정의 이미지로 목록 기호 설정
@@ -21,38 +21,100 @@
      list-style-image로 삽입하는 것은 추천하지 않는다.
      따라서 가상요소에 이미지를 삽입하는 방식을 택한다. 
   */
-   
-ol{
-  /* list-style-type:disc ; */
-  /* list-style-position: outside; */
-  /* list-style-image: url("../../asset/img/blank_heart.svg"); */
-  /* list-style-image: linear-gradient(to left bottom,red,blue); */
-  list-style: url ("../../asset/img/blank_heart.svg");
 
-}
-  
-  
-  
-  
-  
-</style>
+      ol {
+        /* list-style-type:disc ; */
+        /* list-style-position: outside; */
+        /* list-style-image: url("../../asset/img/blank_heart.svg"); */
+        /* list-style-image: linear-gradient(to left bottom,red,blue); */
 
-</head>
-<body>
-  
-</body>
-<h2>목록 스타일 예제</h2>
-<!-- ol>li{5번째 항목}*4 -->
-<ol>
-  <li>1번째 항목</li>
-  <li>2번째 항목</li>
-  <li>3번째 항목</li>
-  <li>4번째 항목</li>
-</ol>
-<ul>
-  <li>1번째 항목</li>
-  <li>2번째 항목</li>
-  <li>3번째 항목</li>
-  <li>4번째 항목</li>
-</ul>
+        list-style: url('../../asset/img/blank_heart.svg');
+      }
+      /* hover- 마우스 오버시 스타일 적용
+     가상요소
+     -::before, ::after */
+      li:hover {
+        font-style: italic;
+      }
+      li:nth-child(even) {
+        background-color: cadetblue;
+      }
+
+      .menu {
+        list-style-type: none;
+        content: '★';
+      }
+      /* 가상요소
+-가상요소는 실제 DOM 구조에 영향을 주지 않고, 
+스타일링과 레이아웃을 조작
+-텍스트, 이미지, 속성을 삽입할 수 있음 */
+      .menu li::before {
+        content: '★';
+      }
+
+      .menu li::after {
+        content: ':모든 메뉴의 뒤에 붙일 문자열';
+      }
+      a::after {
+        content: '(' attr(href) ')';
+      }
+
+      /* 
+가상요소
+  -텍스트,이미지, 속성을 삽입할 수 있음
+
+*/
+      .menu li:hover::after {
+        content: '○';
+      }
+
+      .dead-link {
+        text-decoration: line-through;
+      }
+
+      .dead-link::after {
+        /* content: "☆"; */
+        content: url('../../asset/img/blank_heart.svg');
+      }
+    </style>
+  </head>
+  <body></body>
+  <h2>목록 스타일 예제</h2>
+  <!-- ol>li{5번째 항목}*4 -->
+  <ol>
+    <li>1번째 항목</li>
+    <li>2번째 항목</li>
+    <li>3번째 항목</li>
+    <li>4번째 항목</li>
+  </ol>
+  <ul>
+    <li>1번째 항목</li>
+    <li>2번째 항목</li>
+    <li>3번째 항목</li>
+    <li>4번째 항목</li>
+
+    <ul class="menu">
+      <li>Menu-1</li>
+      <li>Menu-2</li>
+      <li>Menu-3</li>
+      <li>Menu-4</li>
+      <li>Menu-5</li>
+    </ul>
+
+    <p>
+      네이버는 대한민국의 검색 포털사이트 입니다.
+      <a href="https://www.naver.com">
+        링크를 통해 네이버로 이동할 수 있습니다.</a
+      >
+      아래 링크는 구글로 이동할 수 있습니다.
+      <a href="https://www.goolge.com">구글</a>
+    </p>
+
+    <p>
+      설정에 대한 링크가 더 이상 존재하지 않는 링크일 때 이러한.. 스타일이
+      적용된 클래스를 부여하여 시각적으로 링크의 비활성 상태를 전달할 수
+      있습니다.
+      <a href="http://localhost:3000/" class="dead-link"></a>
+    </p>
+  </ul>
 </html>

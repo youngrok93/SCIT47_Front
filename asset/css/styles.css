@@ -1,0 +1,29 @@
+[title] {
+  color: green;
+}
+p {
+  color: blue;
+}
+.description~section{
+background-color:turquoise;
+}
+h2+p{
+  color:red
+}
+ul > li {
+  font-weight: bold;
+}
+.highlight{
+  background-color: coral;
+}
+.highlight:hover{
+  background-color: blueviolet;
+}
+
+
+#unique-item{
+font-size: 10px;
+  }
+  div>p:nth-child(odd)::before{
+content: "✅";
+  }
