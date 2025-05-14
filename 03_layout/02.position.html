@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position</title>
+<style>
+/* position : relative | absolute | fixed | sticky */
+
+/* relative : 원래 위치에서 이동하기 */
+.relative{
+  width: 300px;
+  height: 300px;
+  background-color: gray;
+  position: relative;
+  top:20px;
+  bottom: 20px;
+  right: 20px;
+}
+/* absolute 사용시 기준이 되는 조성을 확인해야 한다
+기준을 정해주는 relative 를 끝까지 못 만나면 body까지 올라감 */
+/* 상위 요소에 relative를 설정을 하면 기준으로 설정할 수 있음 */
+.absolute{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: aqua;
+  width: 50px;
+  height: 50px;
+}
+/* fixed는 고정임 */
+.fixed{
+  /* 무조건 화면상의 위치를 기준으로 한다. 부모요소와 관계 없다. */
+  background-color: blueviolet;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 30px;
+}
+/* absolute: 기준이 되는 조상 요소 기준으로 배치하기 */
+
+/* fixed: 화면에 고정하기 */
+
+/* sticky: 스크롤 시 고정 */
+.sticky{
+  position: sticky;
+  height: 50px;
+  top: 10px;
+  background-color: yellow;
+}
+
+ body{
+  border: 1px solid red;
+ }
+ 
+</style>
+
+
+
+</head>
+<body>
+<div class="relative"></div>
+<div class="absolute">Absolute position</div>
+<div class="fixed">fixed</div>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+Aspernatur quidem fuga dolor blanditiis. 
+Mollitia dolores voluptatum aut asperiores<div class="sticky">sticky position</div> aperiam corrupti assumenda fuga, ea laboriosam ipsum, esse laborum quasi impedit reprehenderit.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cum consectetur praesentium qui commodi? Rerum quisquam alias, saepe veniam non sunt quo! Cum, velit dolor similique quod corrupti vero enim.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, atque soluta at dignissimos esse tenetur possimus officia obcaecati pariatur cupiditate id, veritatis magnam nulla amet quos, earum totam quae unde.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sit doloremque itaque quibusdam facilis pariatur ea in. Alias, at. Sint delectus a dolorum quos sunt corrupti asperiores eaque exercitationem itaque!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis harum praesentium quisquam libero, excepturi quibusdam ea culpa? Repellendus ab qui odit id libero earum repudiandae, non, amet facere alias magni?
+<hr>
+<div style="background-color: blue; height: 100px;"></div>
+<div class="absolute">Absolute position</div>
+
+</body>
+</html>
