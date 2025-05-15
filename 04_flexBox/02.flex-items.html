@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-items</title>
+    <style>
+      /* 플렉스 컨테이너 스타일 */
+      .flex-container {
+        display: flex;
+        background-color: gray;
+      }
+
+      /* 플렉스 아이템 스타일 */
+      .flex-container > div {
+        background-color: violet;
+        color: aqua;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        font-size: 30px;
+        padding: 3px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox items 속성들</h1>
+    <h3>order 속성</h3>
+    <p>아이템의 정렬 순서 설정 (숫자로 부여)</p>
+    <div class="flex-container">
+      <div style="order: 4">1</div>
+      <div style="order: 2">2</div>
+      <div style="order: 1">3</div>
+      <div style="order: 0">4</div>
+    </div>
+
+    <h3>Flex-grow</h3>
+    <p>남는 공간을 나누는 비율 (숫자로 부여)</p>
+    기본값 0인 상태에서는 늘어나지 않는다.
+    <div class="flex-container">
+      <div style="flex-grow: 1">1</div>
+      <div style="flex-grow: 1">2</div>
+      <div style="flex-grow: 2">3</div>
+      <div style="flex-grow: 1">4</div>
+    </div>
+    <h3>flex-shrink</h3>
+    <p>컨테이너 공간이 부족할 때 아이템이 줄어드는 정도</p>
+    기본값이 1 인 상태이며 0으로 설정하면 줄어들지 않는다.
+    <div class="flex-container">
+      <div>1</div>
+      <div style="flex shrink: 0;">2</div>
+
+      <div>3</div>
+      <div style="flex-shrink: 2">4</div>
+      <div>1</div>
+      <div class="flex-container">
+        <div>1</div>
+        <div style="flex-shrink: 0">2</div>
+
+        <div>3</div>
+        <div style="flex-shrink: 3">4</div>
+      </div>
+    </div>
+    <h3>flex-basis</h3>
+    <p>아이템의 기본크기 설정</p>
+    .flex-container>div*4
+    <h3>align-self</h3>
+    <p>형제요소와의 배치를 정렬</p>
+    .flex-container>div*4
+  </body>
+</html>
