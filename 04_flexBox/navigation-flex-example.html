@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-navigate</title>
+    <style>
+            
+        nav {
+          width: 70vw;
+
+    
+              
+
+              margin: 0 auto;
+        }
+        ul{
+          list-style-type: none;
+              padding: 0px;
+              display:flex
+              width: 20%;
+              line-height: 50px;
+              text-align: center;
+        }
+        @media (max-width: 768px) {
+        ul {
+          flex-direction: column;
+        }
+        ul>li{
+          width:70vx;
+        }
+        li {
+          width: 100%;
+          min-width: 0;
+          background-color: pink;
+        }
+        a {
+
+           display: block;
+              text-decoration: none;
+              color: black;
+
+        }
+      }
+
+
+
+
+
+
+            /* 리스트 아이템에 블릿이 없다
+        글자 색이 다르다
+        글자에 밑줄이 없다-text-decoration:none(a에 적용)
+        수평으로 배치 float li
+        글자는 리스트 아이템 요소 내에서 가운데 정렬
+        메뉴 하나하나가 크기 조절
+        높이는 nav의 높이-line height:50px
+        폭은 다섯개가 nav를 꽉 채우게 균등하게 width:20%
+        변하는 배경색 부분은 화면상에서 자연스럽게 꽉 채워져야
+        hover의 스타일이 적용되는 순간에 a요소를 클릭 가능
+        마우스를 올렸을 때 글자색과 배경색이 변한다.
+
+         */
+
+
+
+
+
+
+            a:hover {
+              color: rgb(255, 0, 0);
+              background-color: rgb(209, 17, 174);
+            }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="">Menu-1</a></li>
+        <li><a href="">Menu-2</a></li>
+        <li><a href="">Menu-3</a></li>
+        <li><a href="">Menu-4</a></li>
+        <li><a href="">Menu-5</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

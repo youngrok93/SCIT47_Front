@@ -12,6 +12,7 @@
       }
 
       /* 플렉스 아이템 스타일 */
+
       .flex-container > div {
         background-color: violet;
         color: aqua;
@@ -24,7 +25,7 @@
       }
     </style>
   </head>
-  <body>
+  <hr>
     <h1>Flexbox items 속성들</h1>
     <h3>order 속성</h3>
     <p>아이템의 정렬 순서 설정 (숫자로 부여)</p>
@@ -49,24 +50,52 @@
     기본값이 1 인 상태이며 0으로 설정하면 줄어들지 않는다.
     <div class="flex-container">
       <div>1</div>
-      <div style="flex shrink: 0;">2</div>
+      <div style="flex-shrink: 0;">2</div>
 
       <div>3</div>
       <div style="flex-shrink: 2">4</div>
       <div>1</div>
-      <div class="flex-container">
+      <div class="flex-container: 0">
         <div>1</div>
-        <div style="flex-shrink: 0">2</div>
+        <div style="flex-shrink: 2">2</div>
 
-        <div>3</div>
-        <div style="flex-shrink: 3">4</div>
+        <div>2</div>
+        <div style="flex-shrink: 2">4</div>
       </div>
     </div>
     <h3>flex-basis</h3>
     <p>아이템의 기본크기 설정</p>
-    .flex-container>div*4
+    width와 flex-basis모두 요소의 너비를 설정하는 속성이지만...
+    flex-basis는 플렉스 컨테이너 안에서만 동작한다. 
+    요소의 크기가 변동되기 전의 기준값 역할을 한다. 
+    <br>
+    플렉스 레이아웃 내에서는 flex-basis가 width 보다 우선순위가 높다.
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div style="flex-basis: 200px; width: 500px;">3</div>
+
+      <div>4</div>
+    </div>
+    <hr>
+    <!--
+    단축속성
+    flex:<grow><shrink><basis>
+      숫자 값 하나만 부여하면 grow를 설정하고 나머지 두 값은 기본값  -->
+
     <h3>align-self</h3>
-    <p>형제요소와의 배치를 정렬</p>
-    .flex-container>div*4
+    <p>형제요소와의 배치를 정렬
+     부모인 플렉스컨테이너의 align-items 속성을 상속
+    </p>
+    <div class="flex-container" style="height: 200px; align-items: flex-start;">
+      <!-- flex 형태에 맞춰서 늘어남
+        원래 있던 값을 덮어씌운다.-->
+      <div>1</div>
+      <div style="align-self: flex-end;">2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <!-- flex 컨테이너 안에 있는 것이 아이템 -->
+  </hr>
   </body>
 </html>

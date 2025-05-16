@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex Flexbox Layout</title>
+
+    <style>
+      /* 전체 페이지 설정 */
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 헤더 스타일 */
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10px;
+        background-color: #333;
+        color: white;
+      }
+
+      header .logo {
+        font-size: 1.5em;
+      }
+
+      header nav {
+        display: flex;
+        gap: 1em;
+      }
+
+      header nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* 메인 컨테이너 설정 */
+      .main-container {
+        display: flex;
+        height: auto;
+      }
+
+      /* 사이드바 스타일 */
+      .sidebar {
+        /* flex-shrink: 0; */
+        background-color: #ff00a6;
+        margin: 20px;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        /* flex-grow: 0;
+        flex-basis: 250px; */
+        flex: 0 0 250px;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+      }
+
+      .sidebar ul li {
+      }
+
+      .sidebar ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.1em;
+      }
+
+      .sidebar ul li a:hover {
+        color: #007bff;
+      }
+
+      /* 콘텐츠 영역 */
+      .content {
+        height: 100vh;
+
+        padding: 20px;
+        background-color: #5eff02;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        gap: 10px;
+        margin-left: 0;
+        margin-top: 1em;
+      }
+
+      /* Footer 스타일 */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+
+      /* 반응형 디자인 */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .main-container {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+          margin: 0;
+        }
+
+        .content {
+          width: 100%;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 헤더 -->
+    <header>
+      <div class="logo">My Website</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <div class="main-container">
+      <!-- 사이드바 -->
+      <div class="sidebar">
+        <h3>Sidebar</h3>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+
+      <!-- 콘텐츠 영역 -->
+      <div class="content">
+        <h1>Main Content</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+          odio. Praesent libero. Sed cursus ante dapibus diam.
+        </p>
+        <p>
+          Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+          Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+          facilisis luctus, metus.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

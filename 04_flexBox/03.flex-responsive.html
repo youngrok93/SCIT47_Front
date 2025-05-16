@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>responsive with flexbox</title>
+  <style>
+    .container{
+      display: flex;
+      font-size: 30px;
+      text-align: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .item{
+      flex: 0 0 50%;
+    }
+
+    .left{
+      background-color: aqua;
+    }
+    .right{
+      background-color: blueviolet;
+    }
+    /* 
+      @media (<condition>) {and (<condition>) ...}
+        조건에 맞을 때 적용할 css 작성
+      }
+        조건은 여러개를 and로 연결 가능
+        조건은 소괄호로 감쌀 것
+
+        모바일 스타일
+        @media (max-width:768px)
+        태블릿 스타일
+        @media(min-width:769px)and (max-width:1024px){}
+        데스크톱 스타일
+        @media(min-width: 1025px)
+    */
+    @media (max-width:768px){
+      .container{
+      flex-direction: column;
+    }
+
+    .item{
+      flex: 0 0 100%;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item left">1</div>
+    <div class="item right">2</div>
+  </div>
+</body>
+</html>

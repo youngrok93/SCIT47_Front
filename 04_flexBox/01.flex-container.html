@@ -24,6 +24,7 @@
         border: 2px solid green;
         border-radius: 5px;
         text-align: center;
+        margin: 10px;
       }
 
       /* 
@@ -43,14 +44,15 @@
       .container {
         border: 1px solid black;
         height: 150px;
-        display:flex;
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         /* flex-flow : <flex-direction><flex-wrap> */
-          flex-flow:row;
+          flex-flow:row wrap;
           justify-content: center;
           align-items:center;
           align-content: center;
+          gap: 10px;
       }
 
       /* 
@@ -60,11 +62,19 @@
       flex-start | center | flex-end | stretch
       align-content:여러줄의 아이템의 정렬을 설정.
       flex 컨테이너 안에 여러줄이 있을 때 만 동작 (wrap일 때만 동작)
+    gap: <숫자단위>
+     아이템간의 간격을 설정한다. (양쪽 끝에는 간격을 주지 않는다.)
+     플렉스 아이템간에 일관된 간격을 조정할 수 있게 해 줌
+     
       */
     </style>
   </head>
   <body>
     <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
       <div class="item">1</div>
       <div class="item">2</div>
       <div class="item">3</div>
