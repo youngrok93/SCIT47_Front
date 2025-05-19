@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연산자</title>
+    <script>
+      /*
+    1.산술연산자
+      사칙연산, %나머지연산, **제곱
+    2.대입연산자, 복합대입연산자,할당연산자
+      =, +=, -=, *==, / =, %=
+    3.비교연산자
+    >, >=, <= , ==, !=, ===, !==
+    4.논리연산자
+    &&, ||, !
+    5.증감연산자, 단항연산자
+    ++, --, 
+    6.삼항연산자
+      조건 ? 참일 때 값 : 거짓일 때 값
+    7.타입연산자
+     typeof, instanceof
+    */
+
+      //문자열 연산
+      const num1 = 1;
+      const num2 = 2;
+      console.log(num1 + num2); //3
+      console.log(num1 + num2 + ''); //3
+      console.log(num1 + '' + num2); // 1 2
+      console.log(num1 + '과' + num2 + '의 합계:' + (num1 + num2));
+      console.log(`${num1}과${num2}의합계:${num1 + num2}`);
+
+      let result;
+      //덧셈
+      result = num1 + num2;
+      console.log(`${num1}과 ${num2}의 덧셈 ${result}`);
+      //뺄셈
+      result = num1 - num2;
+      console.log(`${num1}과 ${num2}의 뺄셈 ${result}`);
+      //곱셈
+      result = num1 * num2;
+      console.log(`${num1}과 ${num2}의 곱셈 ${result}`);
+      //나눗셈
+      result = num1 / num2;
+      console.log(`${num1}과 ${num2}의 나눗셈 ${result}`);
+
+      //나머지 연산
+      result = num1 % num2;
+      console.log(`${num1}과 ${num2}의 나머지연산 ${result}`);
+
+      //제곱 연산
+      result = num1 ** num2;
+      console.log(`${num1}과 ${num2}의 제곱연산 ${result}`);
+
+      //복합대입 연산자 ~~해서 할당(대입)
+      let x = 10;
+      x **= 5;
+      console.log(x);
+
+      //비교 연산자 : 논리형값을 변환
+      // ==연산자   (동등비교, 느슨한 비교): 두 값이 같은지를 비교 (자료형을 자동변환 후 비교)
+      // ===연산자(권장) (일치비교, 엄격한 비교): 두 값과 데이터 타입이 모두 같은지를 비교
+      console.log(10 > 3);
+      console.log(5 == '5'); // true
+      console.log(5 === '5'); //false
+      console.log(5 != '5'); // false
+      console.log(5 !== '5'); // true
+
+      console.log('======================');
+      console.log(null == undefined);
+      console.log(null === undefined);
+      console.log(typeof null);
+      console.log(typeof undefined);
+      console.log('=====================');
+
+      //논리 연산자
+      console.log(true && false); //false
+      console.log(true || false); //true
+      console.log(!true); //false
+
+      //증감연산자, 단항연산자
+      let i = 1; //증감연산자도 재할당이 일어나므로 let키워드
+      console.log(++i); // 먼저 증가 후 출력 2
+      console.log(i++); // 먼저 출력 후 증가 2 출력 후 실제 값은 3
+      console.log(i); //
+
+      //삼항 연산자
+      const age = 20;
+      const status = age >= 18 ? '성인' : '미성년자';
+      console.log(status);
+
+      //타입 연산자
+      console.log(typeof 123);
+      // instanceof : 반환값이 논리형이다.
+      // 타입을 확인하고 싶은 대상 instanceof 확인하려는 인스턴스
+      console.log([] instanceof Array);
+    </script>
+  </head>
+  <body></body>
+</html>
