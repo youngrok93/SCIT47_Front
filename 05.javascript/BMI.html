@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bmi</title>
+    <script>
+      // BMI 계산기
+      const name = prompt('이름을 입력하세요');
+      const height = prompt('키를 입력하세요 (cm)');
+      const weight = prompt('몸무게를 입력하세요 (kg)');
+
+      const bmi = weight / (height / 100) ** 2;
+      switch (bmi) {
+        case bmi < 18.5:
+          console.log(`${name}은 저체중 입니다.`);
+          break;
+        case bmi < 23:
+          console.log(`${name}은 정상 입니다.`);
+          break;
+        case bmi < 25:
+          console.log(`${name}은 과체중 입니다.`);
+          break;
+        default:
+          console.log(`${name}은 비만 입니다.`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <script>
+    console.log('head영역 이전에도 쓸 수 있다. ');
+  </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <script>
+      // 스크립트의 실행을 지연시키는 방법 1
+      document.addEventListener('DOMContentLoaded', function () {
+        console.log('Hello, World');
+        console.log('실행이 지연된 스크립트2')
+      });
+      // 단일행 주석
+      /*...
+      /**...
+      // ctrl + /
+      /*
+        다행주석을 쓸 수는 있지만 기본 단축키로는 안됨
+      */
+      /**
+       * 이렇게 생긴 주석도 있음
+       * 도큐먼트 주석 docString ()이라고 부르며 자바스크립트는 JSDoc이라고 부름(툴 이름이자 문법 스타일).
+       * 코드의 문서화, API설명을 위해 사용,팀 개발시 가독성과 유지보수성 향상.
+       */
+    </script>
+    <!-- 스크립트의 실행을 지연시키는 방법 2 -->
+    <script src="../asset/js/aaa.js" defer></script>
+  </head>
+  <script>
+    console.log('head와 body사이에도 쓸 수 있다.');
+  </script>
+  <body>
+    <script src="../asset/js/bbb.js"></script>
+    <script>
+      console.log('3 body영역 안에도 쓸 수 있다.');
+    </script>
+    <p>스크립트 사이에 HTML요소</p>
+    <script>
+      console.log('4 html 요소 사이에서도 등장할 수 있다.');
+    </script>
+    <p>
+      F12버튼을 눌러 개발자 도구를 열 수 있으며, console.log();
+      <script src="../asset/js/bbb.js">
+        // src 속성이 지정된 script요소의 컨텐츠는 스크립트로서 동작하지 않는다..
+      console.log('이 콘솔문은 출력될까?===============')
+      </script>
+      <script>
+
+      </script>
+      구문으로 작성된 내용을 학인할수있다
+    </p>
+  </body>
+  <script>
+    console.log('body 밖에도 쓸 수 있다?');
+  </script>
+</html>
+<script>console.log(' 8 html 밖에도 쓸 수 있다?.'); </script>
+<!-- 이 이후에 defer 속성을 준 외부 스크립트가 실행됨 여까지 다 했다!라는 사실을
+ DOMContentLoaded라는 이벤트로 인식 -->

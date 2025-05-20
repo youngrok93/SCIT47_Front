@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제어문</title>
+    <script>
+      for (let index = 0; index < 5; index++) {
+        console.log(index);
+      }
+      for (let index = 0; index < 5; index++) {
+        if (index % 2 === 0) {
+          document.write(`<div class="red">반복문${index}</div>`);
+        } else {
+          document.write(`<div class="blue">반복문${index}</div>`);
+        }
+      }
+
+      //for...in: 객체의 열거 가능한 속성(key)에 대한 반복
+      const obj = {
+        a: 1,
+        b: 2,
+        c: 3,
+      };
+      for (const key in obj) {
+        console.log(key, obj[key]);
+      }
+
+      //for..of:이터러블(배열, 문자열,Set, )에 사용 반복대상 그 value이고 배열, 문자열에 자주 전환
+      //이터러블? 반복가능한객체!
+      //반복시마다 새로운 value를 가리키는 식으로 동작
+      const arr = ['a', 'b', 'c'];
+      for (const element of arr) {
+        console.log(element);
+      }
+
+      //forEach 배열에 사용 반복대상 value
+      const arr2 = [1,2,3];
+      arr2.forEach(
+      (value,index,kkk)=>{console.log(value,index,);}
+    );
+      let condition = true;
+      // while (condition) {
+      //   condition = prompt('조건을 입력하세요');
+      //   alert(`입력 받은 값: ${condition}, 타입: ${typeof condition}`);
+        // prompt는 항상 문자열로 입력 받는다.
+      //}
+
+      // let choice;
+      // do {
+      //   choice = prompt('1. 시작 2. 종료');
+      //   alert(`입력 받은 값: ${choice}, 타입: ${typeof choice}`);
+      // } while (choice !== '1' && choice !== '2');
+    </script>
+    <style>
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
