@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열</title>
+    <script>
+      /*
+        리터럴로 암시적 생성이 가능한 객체.
+  
+        length : 문자열의 길이 값을 반환
+        valueOf() : 기본데이터타입 값을 반환
+        toString() : 문자열로 변환
+        charAt(index): index 번째 문자를 반환
+        indexOf(문자): 일치하는 문자 중 가장 작은 인덱스를 반환
+        concat() : 문자열 합치기
+        toLowerCase() : 영문 소문자로 변환
+        toUpperCase() : 영문 대문자로 변환
+        trim() : 문자열 앞 뒤의 공백 문자를 제거
+        substring() : 인덱스 시작부터 끝 인덱스 바로 앞까지 값을 반환
+        replace() : 매치된 결과를 지정한 값으로 대체
+        
+        */
+        console.log(str.replace('World', '홍길동'));
+
+        //search()
+        console.log(str.search('1'));
+
+        const msg= 'Hello world! ' ;
+
+        console.log(msg);
+        console.log(msg.trim(),tol_overCase());
+        console.log(msg includes('World'));
+        console.log(msg,indesOF('o'));
+        console.log(msg.trim().slice(0,5));
+        console.log(msg,replace('World','JavaScript').trim);
+
+    </script>
+  </head>
+
+  <body>
+
+  </body>
+
+</html>

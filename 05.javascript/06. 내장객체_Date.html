@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <script>
+      // Date 객체
+      // new 키워드를 통해 인스턴스를 만들어서 사용해야 하는 객체
+      //  (데이터를 담는 객체는 인스턴스가 필요하다.)
+      // 생성시점의 시간 등 개별 상태를 보유함.
+      let today = new Date();
+
+      // Date객체를 할당한 today에서 메서드를 호출하고 값을 할당해 출력해봅시다.
+      // .getMonth() 0~11임에 주의
+      // .getDate() 일
+      // .getDay() 요일 0:일요일 ~ 6:토요일
+      // .getHours() .getMinutes() .getSeconds() 시,분,초 얻기
+      // .getFullYear() 연도 얻기
+      // .toISOString()	ISO 형식 문자열 반환
+      // .toLocaleString()	지역 기반 문자열로 반환
+    
+      let month = today.getMonth() + 1;
+      let date = today.getDate();
+      let yoilnum = today.getDay();
+      const arr = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+      let yoil = arr[yoilnum];
+
+      let hours = today.getHours();
+      let minutes = today.getMinutes();
+      let seconds = today.getSeconds();
+
+      let year = today.getFullYear();
+
+      console.log(`오늘은 ${year}년, ${month}월, ${date}일, ${yoil}입니다. `);
+      console.log(`지금 시각은 ${hours}시, ${minutes}분, ${seconds}초 입니다.`);
+      console.log(today.toISOString());
+      console.log(today.toLocaleString());
+
+    </script>
+  </head>
+
+  <body>
+
+  </body>
+
+</html>

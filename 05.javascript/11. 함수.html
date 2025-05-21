@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+    <script>
+      /*
+Function
+1.함수의 문법
+-명령규칙: 영문자, , $사용가능, 숫자로 시작할 수 없다. 특수문자 사용불가
+-명명관계: 동사로 시작, 두 개 이상의 단어는 카멜케이스
+function 함수이름(arg1, arg2, arg3 ...){
+  //명령문; 
+}
+2. 리턴
+-return을 만나면 함수의 실행을 중지하고 호출한 곳으로 리턴값을 반환
+-return을 작성하지 않으면 undefined를 반환
+*/
+      //1. 함수 선언문
+      //함수 선언문이 평가되면 식별자가 암묵적으로 생성되고 함수 객체가 할당됨
+      //함수의 호이스팅 : 실제 선언되기 이전에도 호출할 수 있다. 
+      function addFunction(arg1, arg2) {
+        return arg1 + arg2;
+      }
+
+      console.log(addFunction); // 함수 자체 출력
+      console.log(typeof addFunction); // function
+      console.log(addFunction(1, 4)); // 5
+      console.log(typeof myFunction);
+      //2.함수 표현식
+      //변수에 함수 리터럴을 할당
+      const myFunction = function (param) {
+        document.write(`함수표현식${param}<br>`);
+      };
+      console.log(typeof myFunction);
+      console.log(myFunction);
+      myFunction();
+
+      //3.화살표 함수
+      const myFunction2 = () => document.write(`함수표현식${value}<br>`);
+
+      console.log(typeof myFunction);
+      console.log(myFunction);
+    
+      myFunction(`화살표함수로작성한함수호출`);
+    
+    //add2
+    const add2 =function(val1,val2){
+      return val1+val2
+
+    };
+
+    console.log(add2(4,6));  //10
+    //add3
+    
+    console.log(add3(5,7)); //12
+    
+    
+    </script>
+
+  </head>
+
+  <body></body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <script>
+      // p105
+      // Math
+      // 인스턴스 생성이 불필요한 정적 유틸리티 객체 상태없이 공용기능을 제공
+      // 데이터를 담는것이 아닌 기능만을 제공하므로 인스턴스를 만들지 않고 직접 사용한다.
+      // static 메서드/속성(자바로치면 static field)을 제공한다.
+      console.log(`원주율: ${Math.PI}`);  // 정적 속성
+      console.log(`오일러상수: ${Math.E}`);
+      // abs()  => 절대값
+      const a = -114.44;
+      console.log(Math.abs(a));
+
+      // ceil()  => 올림
+      console.log('-----ceil-----');
+      console.log(Math.ceil(a));
+
+      // js 에서는 0, -0을 구분하여 사용한다.
+
+      // floor()  => 내림
+      console.log('-----floor-----');
+      console.log(Math.floor(a));
+
+
+      // trunc()  => 버림 (정수 부분만 반환)
+      console.log('-----trunc-----');
+      console.log(Math.trunc(a));
+
+
+      // round()  => 반올림
+      console.log('-----round-----');
+      console.log(Math.round(a));
+
+      console.log('=====참고=====');
+      console.log(0 / 0); //NaN
+      console.log(10 / 0); //Infinity
+
+      console.log(0.1 + 0.2);
+      console.log(0.1 + 0.2 === 0.3);
+      // 2진수로 변환하는 과정에서 오차가 생김
+      console.log(typeof (0.1 + 0.2).toFixed(1));
+      console.log(typeof Number((0.1 + 0.2).toFixed(1)));
+      console.log(typeof 0.3);
+      console.log(Number((0.1 + 0.2).toFixed(1)) === 0.3);
+
+      // max() 최댓값
+      console.log('-----max-----');
+      console.log(Math.max(14, 2, 35, 220));
+
+      // min() 최솟값
+      console.log('-----min-----');
+      console.log(Math.min(14, 2, 35, 220));
+
+
+      // pow(n1, n2) : 거듭제곱
+      console.log('----pow-----');
+      console.log(Math.pow(8,3));
+
+
+      // random()  => 0 ~ 1 미만의 난수 발생
+      console.log(Math.trunc(Math.random()*10));
+
+      // 0 ~ 45 랜덤
+      console.log(Math.trunc(Math.random()*46));
+
+    </script>
+
+  </head>
+
+  <body>
+
+  </body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+    <script>
+      /*
+        내장객체는 자바의 표준 라이브러리 클래스와 비슷한 역할을 한다..
+        - 자바에서 String, ArrayList, Math 같은 클래스가 자주 사용하는 기능을 미리 구현해놓은 것처럼,
+          자바스크립트에서도 String, Array, Math, Date 등의 내장 객체가 그러한 역할을 한다.
+        - 이 내장 객체들은 자료 구조나 유틸리티 기능을 담고 있으며, 객체에 포함된 메서드(method)를 통해 기능을 사용할 수 있다.
+        사용방식
+          내장객체는 변수에 할당하여 사용할 수 있으며, 변수에서 점 연산자를 통해 메서드를 호출할 수 있다.
+        
+        자바와 내부 구조는 다르지만 필요한 기능을 미리 구현해 둔 도구상자 라는 점에서 동일한 목적을 가진다.
+
+        * 배열(Array)
+        자바스크립트 배열은 순서가 있는 값들의 집합을 저장하는 변수
+        배열은 다양한 데이터 타입의 값을 포함할 수 있으며,
+        각 값은 인덱스로 접근 가능
+
+        new또는 리터럴로 인스턴스를 생성하여 사용해야하는 객체 (데이터를 담는 객체는 인스턴스가 필요하다.)
+        리터럴? 사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 생성하는 표기법
+      */
+
+      const fruits = ['Apple', 'Cherry', 'Banana'];
+
+      // 배열의 요소 접근
+      console.log(fruits[0]); //"Apple"
+      console.log(fruits[1]); //"Banana"
+
+      // 배열의 요소 수정
+      fruits[2] = 'Blueberry';
+      console.log(`배열의 요소를 수정함 ${fruits}`);
+
+      // 배열 길이
+      console.log(fruits.length);
+
+      // 배열의 끝에 요소 추가 (push)
+      // push 메서드는 배열의 끝에 하나 이상의 요소를 추가
+      fruits.push('Melon');
+      console.log(fruits);
+
+      // 배열의 끝에서 요소 제거 (pop)
+      // pop 메서드는 배열의 끝에서 요소를 제거하고,
+      // 제거된 요소를 반환
+      let lastFruit = fruits.pop();
+      console.log(lastFruit);
+      console.log(fruits);
+
+      //p112
+      // 숙제 : 배열 합치기 (concat)
+      const arr1 = ['gam', 'grape'];
+      const concatresult = fruits.concat(arr1);
+      console.log(concatresult);
+
+      // 숙제 : 배열 정렬 (sort) 기본은 유니코드 기준
+      fruits.sort();
+      console.log(fruits);
+
+      // 숙제 : 배열 요소 순서 뒤집기 (reverse)
+      fruits.reverse();
+      console.log(fruits);
+
+      // 배열 순회하기 (foreach)
+      fruits.forEach((fruit, index) => {
+        console.log(`${index}: ${fruit}`);
+      });
+
+      // p122, 127
+      // 숙제 : 배열의 요소를 변환하여 새로운 배열 만들기 (map) map 안에서 부르는 건 배열의 요소를 가리키게 됨
+      const map_1 = new Map();
+      map_1.set("Cherry", 5000);
+      console.log(map_1.get("Cherry"));
+      let arr2 = [1, 2, 3];
+      let arr3 = arr2.map((item) => (item * 12));
+      console.log(arr3);
+
+      // 숙제 : 조건에 맞는 요소만 추출 (filter) filter 안에서 부르는 건 배열의 요소를 가리키게 됨
+      // const numbers = [1, 2, 3, 4, 5, 6];
+      // const evens = numbers.filter(num => num % 2 === 0);
+      // console.log(evens);
+
+      // 숙제 : 조건에 맞는 (첫)요소를 찾기 (find) find 안에서 부르는 건 배열의 요소를 가리키게 됨
+      // const result = array.find((element, index, array) => {
+      // return 조건식;
+      // });
+
+      // const numbers = [3, 7, 12, 5, 20];
+      // const found = numbers.find(num => num > 10);
+      // console.log(found);
+
+      // 숙제 : 특정 요소의 인덱스 확인하기(indexOf )
+      // 배열용
+      // array.indexOf(찾을값, [시작인덱스]);
+      // 문자열용
+      // 문자열.indexOf("찾을문자", [시작인덱스]);
+
+      // 숙제 : 특정값이 배열 안에 들어있는지 확인하는 (includes)
+      // 배열용
+      //  array.includes(값, [시작 인덱스]);
+      // 문자열용
+      // 문자열.includes("찾을문자", [시작 인덱스]);
+      // true 또는 false를 반환
+
+      // map, filter, find 와 같이 배열을 변수에 할당할 때 원래의 배열은 유지됨을 볼 수 있다. 원본배열은 변경되지 않는다. 새로운 배열을 반환하는 것 얕은 복사.
+
+
+      // 숙제 : 배열을 복사하는 (slice)
+      // array.slice(start, end);     // end는 포함되지 않음!
+      // string.slice(start, end);    // 문자열도 동일하게 동작
+
+      // 배열 메서드 체이닝 : 여러 메서드를 이어서 쓸 수 있다.
+
+      // 2차원 배열
+      const arr = ['자바', 'DB', ['HTML', 'CSS', 'JavaScript']];
+      console.log(arr[0]);
+      console.log(arr[2][0]);
+      for (const subject of arr[2]) {
+        console.log(subject);
+      }
+
+      // 한번에 반복
+      for (let i = 0; i < arr.length; i++) {
+        // 주어진 값이 배열인지 여부를 확인하는데 사용
+        if (Array.isArray(arr[i])) {
+          for (let j = 0; j < arr[i].length; j++) {
+            console.log(`배열안의 배열을 반복중...${arr[i][j]}`);
+          }
+        } else {
+          console.log(arr[i]);
+        }
+      }
+
+      // 낱개로 배열에 접근
+      const html = arr[2][0];
+      const css = arr[2][1];
+      const js = arr[2][2];
+      console.log(`0:${html}, 1:${css}, 2:${js}`);
+    </script>
+
+  </head>
+
+  <body>
+
+  </body>
+
+</html>

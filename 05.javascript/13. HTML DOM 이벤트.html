@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+    <script>
+      /*
+이벤트 핸들러 추가하기
+1. HTML 인라인 이벤트핸들러
+ : 빠르지만 유지보수 어려움
+2. DOM요소의 프로퍼터에 이벤트 핸들러 할당
+    :하나의 핸들러만 설정 가능.
+3. addEventListener메서드 방식
+:가장많이씀 표준
+*/
+      // focus, focusout, change, keyup, submit -시험
+      function changeRed() {
+        console.log('changeRed실행');
+        document.getElementById('mouse').style.color = 'red';
+      }
+
+      function changeBlue() {
+        console.log('changeBlue실행');
+        document.getElementById('mouse').style.color = 'blue';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="mouse" onmouseover="changeRed()" onmouseout="changeBlue()">
+      마우스를 올려보세요
+    </div>
+    <button id="myButton">myButton</button>
+    <script>
+      const myButton = document.getElementById('myButton');
+      myButton.onclick = () => {
+        alert('myButton버튼이 클릭되었습니다');
+      };
+    </script>
+
+    <button id="myButton2">myButton</button>
+    <button id="myButton3">myButton3 2번버튼의 이벤트를 제거하는 버튼</button>
+    <script>
+      // 1. 반드시 이름 있는 함수로 정의
+      function handleClick() {
+        alert('myButton2가 클릭되었습니다!');
+      }
+
+      // 2. 버튼 요소 가져오기
+      const myButton2 = document.getElementById('myButton2');
+      const myButton3 = document.getElementById('myButton3');
+
+      // 3. 이벤트 등록
+      myButton2.addEventListener('click', handleClick);
+
+      // 4. myButton3 클릭 시 myButton2의 이벤트 제거
+      myButton3.addEventListener('click', function () {
+        myButton2.removeEventListener('click', handleClick);
+        alert('myButton2의 클릭 이벤트가 제거되었습니다!');
+      });
+    </script>
+  </body>
+</html>

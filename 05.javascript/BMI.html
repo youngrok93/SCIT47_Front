@@ -11,6 +11,7 @@
       const weight = prompt('몸무게를 입력하세요 (kg)');
 
       const bmi = weight / (height / 100) ** 2;
+
       switch (bmi) {
         case bmi < 18.5:
           console.log(`${name}은 저체중 입니다.`);
@@ -24,6 +25,10 @@
         default:
           console.log(`${name}은 비만 입니다.`);
       }
+      // 명시적변환을 통해 입력차의 안정성확보
+      //소수점 두번째 자리까지만 나오도록 계산
+      // 입력값 유효성검사(숫자인지,0이상의 숫자인지)
+      // 조건문으로 분류까지
     </script>
   </head>
   <body></body>
