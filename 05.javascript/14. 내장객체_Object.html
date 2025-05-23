@@ -14,7 +14,7 @@
 new 또는 리터럴로 인스턴스를 생성해서 사용해야하는 객체
 */
 
-      const book = {
+      const user = {
         //키 값은 유효한 식별자를 지정할 것.
         title: '책', // 객체 프로퍼티 키와 값으로 이루어진다.
         point: 124,
@@ -22,7 +22,63 @@ new 또는 리터럴로 인스턴스를 생성해서 사용해야하는 객체
           alert('하이');
         },
       };
-      console.log(book.great());
+      console.log(user.great());
+      //2. const object =new Object() 생성자 
+
+      // 3 클래스 정의를 통한 객체 생성
+      // 클래스 = 객체를 만드는 레시피
+      class Human{
+        constructor(name,age){
+          this.name=name;
+          this.age=age;
+        }
+        great(){
+          
+        }
+      }
+      const lee = new Human('이순신',50);
+      console.log(lee);
+
+      console.log(user.name);
+
+      //객체의 속성 접근 방법
+      //1.속성선택하기 점 표기
+
+      // 2.대괄호 표기  //지양 표현
+      // 객체['키이름'] 문자열로 속성을 참조한다. 별로 안씀
+      console.log(user['name']);
+
+      // 키가 동적으로 정해지는 경우
+      let key = '';
+      let condition = true; // 또는 false
+      let name = 'title';
+      let age = 'point';
+      if (condition) {
+        key = name;
+      } else {
+        key = age;
+      }
+      console.log(user[key]);
+      // 키에 공백이나 특수문자 있는 경우=>식별자규칙을 따졌는가
+
+      const obj = { 'user name': '철수' };
+      console.log(obj['user name']);
+
+      // 숫자 또는 변수기반의 키 접근
+      const arr = ['aaa', 'bbb', 'ccc'];
+      console.log(arr);
+      console.log(arr[0]);
+      // 배열도 객체로서 내부는 인덱스:요소 키: 값 형태를 가지고 있음
+
+      console.log(user);
+      // 객체의 속성 값 변경
+      user.name ='홍길동';
+      user.age=30;
+      console.log(user);
+
+      // 객체의 속성 추가( 없는 속성을 불러서 값을 할당하면 속성이 생김!)
+      user.gener='남성';
+      console.log(user);
     </script>
   </head>
   <body></body>

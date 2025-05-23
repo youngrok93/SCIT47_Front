@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예제문제3</title>
+    <script>
+      window.onload = function () {
+        document.getElementById('tb').style.display = 'none';
+        //   const btn1 = document.querySelector('#btn1');
+        //   const btn2 = document.querySelector('#btn2');
+        //   btn1.addEventListener('click',()=>{
+        //     const choice=confirm('정보를 표시하겠?');
+        //     console.log(choice);
+        //     if(choice){
+
+        //     }
+        //   });
+      };
+    </script>
+  </head>
+  <body>
+    <button id="btn1">정보 보기</button>
+    <button id="btn2">정보 닫기</button>
+    <script>
+      document.getElementById('btn1').addEventListener('click', () => {
+        confirm('정보를 표시하겠?');
+       
+        if (confirm()) {
+          document.getElementById('tb').style.display = 'inline';
+        } else {
+          document.getElementById('tb').style.display = 'none';
+        }
+
+        getElementById('tb').style.display = 'inline';
+      });
+      document.getElementById('btn2').addEventListener('click', () => {
+        document.getElementById('tb').style.display = 'none';
+      });
+      document.getElementById('tb').style.display = 'none';
+    </script>
+    <table id="tb">
+      <tr>
+        <td>이름</td>
+        <td>등급</td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>

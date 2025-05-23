@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 입력요소 만들기
+     입력된 글자수를 실시간(입력이벤트에따라)으로 출력될 공간을 만들기
+     입력요소에 이벤트핸들러추가하기(적절한 이벤트를 쓰세요) -->
+    <title>예제문제2</title>
+
+    <script>
+      window.onload=()=>{
+        const text=document.getElementById('text');
+        const span=document.getElementById('id');
+        text.addEventListener('keyup',keyup);
+        function keyup(){
+          span.innerHTML=text.value.length;
+          if (text.value.length>=10) {
+            span.innerHTML='10글자 이상입니다.';
+            text.style.backgroundColor='red';
+          } else {
+            span.innerHTML=text.value.length+'글자';
+            text.style.backgroundColor='blue';
+          }
+          
+        }
+      }
+    </script>
+    
+  </head>
+  <body>
+    
+    <input type="text" name="" id="text" />
+    
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예제</title>
+    <script></script>
+  </head>
+  <body style="background-color: aqua">
+    <button id="btn">배경색 변경</button>
+    <button id= "btn2">흰색 변경</button>
+    <script>
+      const myButton = document.querySelector('#btn');
+
+      myButton.addEventListener('click', () => change());
+      function change() {
+        const a = Math.floor(Math.random() * 3);
+        const arr =['aqua','yellow','red']
+        document.body.style.backgroundColor =arr[a]
+
+
+
+        
+        // const a = Math.floor(Math.random() * 255);
+        // document.body.style.backgroundColor = `rgb(${a},${b},${c})`;
+        // Math.random()*5
+      }
+    </script>
+
+    <script>
+      const myButton2=document.querySelector('#btn2');
+      myButton2.addEventListener('click',()=> white());
+      function white(){
+      document.body.style.backgroundColor='white'
+      };
+
+    </script>
+  </body>
+</html>
